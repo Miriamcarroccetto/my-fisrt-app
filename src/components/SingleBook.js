@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {Card} from 'react-bootstrap'
-import CommentArea from './CommentArea'
+
 
 export default function SingleBook({book}) {
 
@@ -12,6 +12,7 @@ export default function SingleBook({book}) {
       border: selected ? '2px solid red' : '1px solid #ccc',
       cursor: 'pointer'}}
       onClick={()=> setSelected(!selected)}
+      className='m-2'
       >
 
       <Card.Img variant="top" src={book.img} alt={book.title} />
@@ -20,7 +21,7 @@ export default function SingleBook({book}) {
       </Card.Body>
     </Card>
 
-    { selected && <CommentArea/>}
+    
     </>
   )
 }

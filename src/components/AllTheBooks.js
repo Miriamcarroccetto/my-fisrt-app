@@ -7,9 +7,6 @@ export default function AllTheBooks({searchBook}) {
 
 
 
- /* const handleSearchChange = (e) => {
-    setSearchBook(e.target.value);
-  }*/
 
   const filteredBooks = books.filter((book) =>
     book.title.toLowerCase().includes(searchBook.toLowerCase())
