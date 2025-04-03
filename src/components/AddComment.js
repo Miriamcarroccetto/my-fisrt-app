@@ -57,7 +57,7 @@ export default function AddComment ({ asin })  {
       <div className="my-3">
         <Form>
           <Form.Group className="mb-2">
-            <Form.Label>Recensione</Form.Label>
+            <Form.Label>RECENSIONE</Form.Label>
             <Form.Control
               type="text"
               placeholder="Scrivi qui la tua recensione..."
@@ -73,7 +73,7 @@ export default function AddComment ({ asin })  {
             />
           </Form.Group>
           <Form.Group className="mb-2">
-            <Form.Label>Valutazione</Form.Label>
+            <Form.Label>VALUTAZIONE</Form.Label>
             <Form.Control
               as="select"
               value={comment.rate}

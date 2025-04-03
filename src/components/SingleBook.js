@@ -1,17 +1,17 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {Card} from 'react-bootstrap'
 
 
-export default function SingleBook({book}) {
+export default function SingleBook({book, selected, setSelected}) {
 
-  const  [selected, setSelected] = useState (false)
+ 
   return (
 
     <>
     <Card style={{ width: '18rem', 
-      border: selected ? '2px solid red' : '1px solid #ccc',
+      border: selected  === book.asin ? '2px solid red' : '1px solid #ccc',
       cursor: 'pointer'}}
-      onClick={()=> setSelected(!selected)}
+      onClick={()=> setSelected(book.asin)}
       className='m-2'
       >
 

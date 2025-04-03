@@ -1,5 +1,5 @@
 import React from 'react'
-import {Nav, Navbar, Container, Form, Col, Row, Button } from 'react-bootstrap';
+import {Nav, Navbar, Container, Form, Col, Row,  } from 'react-bootstrap';
 
 export default function MyNav({searchBook, setSearchBook}) {
   return (
@@ -23,8 +23,8 @@ export default function MyNav({searchBook, setSearchBook}) {
           type="text" 
           placeholder="Titolo del Libro..."
           value={searchBook}
-          onChange={(e)=>setSearchBook (e.target.value)} /*value={searchBook} onChange={handleSearchChange}*//>
-           
+          onChange={(e)=>setSearchBook (e.target.value)}/>
+          
         </Form.Group>
       
       <Row>
