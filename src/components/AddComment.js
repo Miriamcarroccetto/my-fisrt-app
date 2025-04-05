@@ -47,17 +47,12 @@ export default function AddComment ({ asin })  {
           console.log("Invio fallito"+ error)
         }
       }
-    
-
-      
-    
-  
   
     return (
       <div className="my-3">
         <Form>
           <Form.Group className="mb-2">
-            <Form.Label>RECENSIONE</Form.Label>
+            <Form.Label><strong>RECENSIONE</strong></Form.Label>
             <Form.Control
               type="text"
               placeholder="Scrivi qui la tua recensione..."
@@ -73,7 +68,7 @@ export default function AddComment ({ asin })  {
             />
           </Form.Group>
           <Form.Group className="mb-2">
-            <Form.Label>VALUTAZIONE</Form.Label>
+            <Form.Label><strong>VALUTAZIONE</strong></Form.Label>
             <Form.Control
               as="select"
               value={comment.rate}

@@ -1,23 +1,27 @@
 import React from 'react'
 import {Nav, Navbar, Container, Form, Col, Row,  } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import img from './Epibooks logo.png'
 
 export default function MyNav({searchBook, setSearchBook}) {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
     <Container>
-      <Navbar.Brand href="#home">Epibooks</Navbar.Brand>
+      <Navbar.Brand href="#home"><img src={img}  alt="Epibooks Logo" style={{maxWidth: '100%', maxHeight: '75px', objectFit: 'cover'  }}/>  </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
-          <Nav.Link href="#">Home</Nav.Link>
+          <Link to="/" className='nav-link'>Home</Link>
           <Nav.Link href="#">About</Nav.Link>
           <Nav.Link href="#">Browse</Nav.Link>
-          
+
         </Nav>
       </Navbar.Collapse>
     </Container>
+
+    
     <Container>
-      <Form.Group className='mb-4'      as={Col} md="6" controlId="validationCustom03">
+      <Form.Group className='ms-5' as={Col} md="6" controlId="validationCustom03">
          
           <Form.Control  
           type="text" 
@@ -30,7 +34,7 @@ export default function MyNav({searchBook, setSearchBook}) {
       <Row>
         
       </Row>
-    </Container>
+    </Container>)
   </Navbar>
   )
 }

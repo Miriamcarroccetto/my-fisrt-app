@@ -1,25 +1,29 @@
-
-
-
 import './App.css'
 import React, { useState } from "react"
-
+import {BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 import { Container, Row, Col } from 'react-bootstrap'
 import MyNav from './components/MyNav'
 import MyFooter from './components/MyFooter'
 import Welcome from './components/Welcome'
 import AllTheBooks from './components/AllTheBooks'
+import NotFound from './components/NotFound'
+import BookDetails from './components/BookDetails'
 
 
 
 export default function App() {
 
   const [searchBook, setSearchBook]= useState("")
+  
+   
 
   return (
+    <BrowserRouter>
     <div className='App'>
       <MyNav searchBook={searchBook} setSearchBook={setSearchBook}/>
-      <Welcome/>
+      <Routes>
+        <Route path='/' element={<>
+          <Welcome/>
       <Container>
         <Row>
           <Col >
@@ -28,8 +32,20 @@ export default function App() {
         </Row>
         </Container>
         <MyFooter/>
+        </>
+        }/>
+        <Route path='*' element={<NotFound/>}/>
+        <Route path='/book/:bookId' element={<BookDetails  />}/>
+        </Routes>
+        
+
+      
+     
+   
       
     </div>
+    </BrowserRouter>
+    
   )
 }
 

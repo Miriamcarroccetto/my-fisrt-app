@@ -5,7 +5,7 @@ export default function Welcome() {
   return (
     <>
      <Container className="text-center my-4">
-        <h1 className="fw-bold text-secondary title-effect">📚 Epibooks 📚</h1>
+        <h1 className="fw-bold text-secondary title-effect">EPIBOOKS</h1>
         
       </Container>
 
