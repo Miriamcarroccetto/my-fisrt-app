@@ -4,7 +4,7 @@ import { ListGroup } from 'react-bootstrap'
 
 export default function CommentList({comments}) {
   return (
-    <ListGroup variant="flush" style={{ color: 'black' }} className="mt-2">
+    <ListGroup  variant="flush" style={{ color: 'black' }} className="mt-2">
 
       {comments.map((comment, index) => (
         <SingleComment key={index} comment={comment}/>

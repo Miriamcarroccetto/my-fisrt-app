@@ -1,6 +1,6 @@
 import './App.css'
 import React, { useState } from "react"
-import {BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
+import {BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Container, Row, Col } from 'react-bootstrap'
 import MyNav from './components/MyNav'
 import MyFooter from './components/MyFooter'
@@ -20,7 +20,7 @@ export default function App() {
   return (
     <BrowserRouter>
     <div className='App'>
-      <MyNav searchBook={searchBook} setSearchBook={setSearchBook}/>
+      <MyNav searchBook={searchBook} setSearchBook={setSearchBook} />
       <Routes>
         <Route path='/' element={<>
           <Welcome/>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import AddComment from './AddComment'
 import CommentList from './CommentList' 
-import {  Alert } from 'react-bootstrap'
+import {  Alert, Spinner } from 'react-bootstrap'
 
 
 const url = 'https://striveschool-api.herokuapp.com/api/comments/'
@@ -9,13 +9,13 @@ const apiKey = " Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2MwOGJ
 
 export default function CommentArea({ asin }) {
   const [comments, setComments] = useState([])
-   
-
+  
   useEffect(() => {
 
     if (!asin) return
 
     const getComments = async () => {
+     
      
       try {
         let response = await fetch(
@@ -48,10 +48,11 @@ export default function CommentArea({ asin }) {
   
 
   return (
-    <div>
+    <div data-testid="comment-area" className='m-5'>
      
       {!asin && <Alert variant="danger" className='m-5'>Seleziona un libro per visualizzare le recensioni</Alert>}
 
+      
       {comments.length > 0 && <CommentList comments={comments} />}
       
      

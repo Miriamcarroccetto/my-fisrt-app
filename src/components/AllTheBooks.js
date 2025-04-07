@@ -7,8 +7,8 @@ import { Row, Col, Container, Button } from "react-bootstrap"
 
 export default function AllTheBooks({searchBook}) {
   const [selected, setSelected]= useState(null)
-  const [visibleBooks, setVisibleBooks] = useState(3)
-  const loadMore = () => { setVisibleBooks(visibleBooks + 3) }
+  const [visibleBooks, setVisibleBooks] = useState(6)
+  const loadMore = () => { setVisibleBooks(visibleBooks + 6) }
   
  
   
@@ -23,12 +23,12 @@ export default function AllTheBooks({searchBook}) {
     <Container >
       <Row>
        
-        <Col >
+        <Col   md={9} sm={7}>
           <LatestRelease books={bookShowing} selected={selected} setSelected={setSelected} />
         </Col>
 
        
-       <Col md={3}>
+       <Col md={3} sm={5}>
           <CommentArea asin={selected} /> 
         </Col>
       </Row>

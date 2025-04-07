@@ -9,7 +9,7 @@ export default function SingleBook({book, selected, setSelected}) {
   return (
 
     <>
-    <Card style={{ width: '18rem', 
+    <Card data-testid="book-card" style={{ width: '18rem', 
       border: selected  === book.asin ? '2px solid red' : '1px solid #ccc',
       cursor: 'pointer'}}
       onClick={()=> setSelected(book.asin)}

@@ -21,7 +21,7 @@ export default function MyNav({searchBook, setSearchBook}) {
 
     
     <Container>
-      <Form.Group className='ms-5' as={Col} md="6" controlId="validationCustom03">
+      <Form.Group className='float-md-end' as={Col} md="6" controlId="validationCustom03">
          
           <Form.Control  
           type="text" 
@@ -34,7 +34,7 @@ export default function MyNav({searchBook, setSearchBook}) {
       <Row>
         
       </Row>
-    </Container>)
+    </Container>
   </Navbar>
   )
 }

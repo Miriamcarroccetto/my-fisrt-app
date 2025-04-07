@@ -19,7 +19,7 @@ export default function NotFound() {
       ))}
           
           
-          <Button as={Link} to="/" variant="primary">
+          <Button as={Link} to="/" variant="secondary">
             Torna alla Home
           </Button>
         </Col>
